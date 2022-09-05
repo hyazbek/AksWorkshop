@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "aksqastg001-2427"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "aksqastg001-2427"
+  template:
+    metadata:
+      labels:
+        app: "aksqastg001-2427"
+    spec:
+      containers:
+        - name: "aksqastg001-2427"
+          image: "craks001.azurecr.io/aksqastg001"
+          ports:
+          - containerPort: 80
